@@ -8,9 +8,11 @@ const fs = require("fs");
 /** Public certificate used for verification.  Note: you could also use the private key */
 // const publicKey = fs.readFileSync(path.join(__dirname, 'certs/certificate.pem'));
 /** Private certificate used for signing JSON WebTokens */
-const privateKey = fs.readFileSync('certs/privatekey.pem');
-/** Public certificate used for verification.  Note: you could also use the private key */
-const publicKey = fs.readFileSync('certs/publicKey.pem');
+// const privateKey = fs.readFileSync('certs/privatekey.pem');
+// /** Public certificate used for verification.  Note: you could also use the private key */
+// const publicKey = fs.readFileSync('certs/publicKey.pem');
+const privateKey = fs.readFileSync(__dirname + '/certs/privateKey.pem');
+const publicKey = fs.readFileSync(__dirname + '/certs/publicKey.pem');
 class Utils {
     constructor() {
         /**
