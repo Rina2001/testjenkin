@@ -1,0 +1,16 @@
+{
+    "error": "invalid_grant",
+    "error_description": "Invalid refresh token"
+}
+
+
+// access token error
+// when token is not available
+{
+    "error": "invalid_token"
+}
+
+
+
+// accessn token expire message. It's will reponse message 
+Unauthorized
