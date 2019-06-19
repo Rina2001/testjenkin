@@ -1,0 +1,56 @@
+{
+  "name": "qm-express-back-end",
+  "version": "1.0.0",
+  "description": "rest api",
+  "main": "dist/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "dev": "ts-node ./lib/server.ts",
+    "start": "nodemon ./dist/server.js",
+    "prod": "npm run build && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/product_native_app/qm-express-back-end.git"
+  },
+  "keywords": [
+    "qm-epxress-back-end"
+  ],
+  "author": "rina.chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/product_native_app/qm-express-back-end/issues"
+  },
+  "homepage": "https://gitlab.com/product_native_app/qm-express-back-end#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "@types/connect-ensure-login": "^0.1.4",
+    "@types/express": "^4.16.0",
+    "@types/jsonwebtoken": "^8.3.0",
+    "@types/oauth2orize": "^1.8.5",
+    "@types/passport": "^0.3.2",
+    "@types/passport-http": "^0.3.7",
+    "@types/passport-http-bearer": "^1.0.33",
+    "@types/passport-local": "^1.0.33",
+    "@types/passport-oauth2-client-password": "^0.1.2",
+    "@types/uuid": "^3.4.4",
+    "body-parser": "^1.18.3",
+    "connect-ensure-login": "^0.1.1",
+    "connect-redis": "^3.4.1",
+    "express": "^4.16.4",
+    "express-session": "^1.16.2",
+    "jsonwebtoken": "^8.4.0",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.9",
+    "oauth2orize": "^1.11.0",
+    "passport": "^0.4.0",
+    "passport-http": "^0.3.0",
+    "passport-http-bearer": "^1.0.1",
+    "passport-local": "^1.0.0",
+    "passport-oauth2-client-password": "^0.1.2",
+    "reflect-metadata": "^0.1.12",
+    "typeorm": "^0.2.9",
+    "uuid": "^3.3.2"
+  }
+}

@@ -1,0 +1,26 @@
+{
+   "type": "mysql",
+   "host": "165.22.99.249",
+   "port": 3306,
+   "username": "devuser",
+   "password": "Devuser@2019",
+   "database": "CKSNDB",
+   "synchronize": true,  
+   "logging": true,
+   "pool" : { "min": 30, "max": 1000},
+   "entities": [
+      "dist/orm/entity/*.js"
+   ],
+
+   "migrations": [
+      "lib/orm/migration/*.ts"
+   ],
+   "subscribers": [
+      "lib/orm/subscriber/*.ts"
+   ],
+   "cli": {
+      "entitiesDir": "lub/orm/entity",
+      "migrationsDir": "lib/orm/migration",
+      "subscribersDir": "lib/orm/subscriber"
+   }
+}
