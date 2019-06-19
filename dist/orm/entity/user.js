@@ -172,4 +172,4 @@ User = __decorate([
     typeorm_1.Entity("tblUser")
 ], User);
 exports.User = User;
-//# sourceMappingURL=user.entity.js.map
+//# sourceMappingURL=user.js.map

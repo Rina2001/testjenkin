@@ -14,7 +14,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const user_entity_1 = require("../entity/user.entity");
+const user_1 = require("../entity/user");
 const typeorm_1 = require("typeorm");
 //import { DriverVehicleDetailRepository } from './vehicleDriver.repository';
 const base_controller_1 = require("../../controller/base.controller");
@@ -271,7 +271,7 @@ let UserRepository = class UserRepository extends typeorm_1.Repository {
     }
 };
 UserRepository = __decorate([
-    typeorm_1.EntityRepository(user_entity_1.User)
+    typeorm_1.EntityRepository(user_1.User)
 ], UserRepository);
 exports.UserRepository = UserRepository;
 //# sourceMappingURL=user.repository.js.map
