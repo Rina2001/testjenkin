@@ -28,9 +28,9 @@ class App {
         this.usrGrpPermisController = new group_permission_controller_1.GroupPermissionController();
         this.preDefinedFieldController = new pre_defined_controller_1.PreDefinedFieldController();
         this.app = express();
+        this.initDatabase();
         this.config();
         // inititalize database
-        this.initDatabase();
         // API 
         this.authorizationServer();
         //1/ USE
@@ -72,7 +72,7 @@ class App {
     */
     initDatabase() {
         typeorm_1.createConnection().then((connection) => __awaiter(this, void 0, void 0, function* () {
-            yield connection.runMigrations();
+            // await connection.runMigrations()
             console.log("ORM connected");
         })).catch(error => {
             console.log(error);
