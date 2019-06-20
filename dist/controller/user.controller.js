@@ -16,9 +16,7 @@ class UserController extends base_controller_1.baseController {
     */
     addUsers(app) {
         app
-            .post(this.controllerName + "addUsers", 
-        //    passport.authenticate('bearer', { session: false }),
-        (req, res) => {
+            .post(this.controllerName + "addUsers", passport.authenticate('bearer', { session: false }), (req, res) => {
             let user = req.body;
             typeorm_1.getCustomRepository(user_repository_1.UserRepository).addUser(user).then(qb => { res.send(qb); });
         });

@@ -16,9 +16,7 @@ class GroupPermissionController extends base_controller_1.baseController {
      */
     getPermissionByGroupID(app) {
         app
-            .post(this.controllerName + "getPermissionByGroupID", 
-        //  passport.authenticate('bearer', { session: false }),
-        (req, res) => {
+            .post(this.controllerName + "getPermissionByGroupID", passport.authenticate('bearer', { session: false }), (req, res) => {
             let groupID = req.body.groupID;
             typeorm_1.getCustomRepository(groupPermission_repository_1.GroupPermissionRepository).getPermissionByGroupID(groupID).then(qb => { res.send(qb); });
         });

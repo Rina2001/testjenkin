@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const base_controller_1 = require("./base.controller");
 const preDefined_repository_1 = require("../orm/repository/preDefined.repository");
 const typeorm_1 = require("typeorm");
+const passport = require("passport");
 /**
  * @Controller
  */
@@ -17,9 +18,7 @@ class PreDefinedFieldController extends base_controller_1.baseController {
    */
     getPreDefinedsByCriterial(app) {
         app
-            .post(this.controllerName + "getPreDefinedsByCriterial", 
-        // passport.authenticate('bearer', { session: false }),
-        (req, res) => {
+            .post(this.controllerName + "getPreDefinedsByCriterial", passport.authenticate('bearer', { session: false }), (req, res) => {
             let criterial = req.body.criterial;
             typeorm_1.getCustomRepository(preDefined_repository_1.PreDefinedFieldRepository).getPreDefinedsByCriterial(criterial).then(qb => { res.send(qb); });
         });
